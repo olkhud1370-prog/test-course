@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find Their Next Great Read · The Linden Bookshop</title>
+  <meta name="description" content="Bookseller onboarding microlearning: use open-ended questions and customer preferences to recommend the right book.">
+  <meta name="theme-color" content="#F5F0E6">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 4C8 7 4 9 4.5 13.5 5 17 8.5 18 12 15.5 15.5 18 19 17 19.5 13.5 20 9 16 7 12 4Z' fill='%2329483D'/%3E%3Cpath d='M12 15.5V21' stroke='%2329483D' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Masthead: brand + progress indicator -->
+  <header class="masthead">
+    <div class="masthead__inner">
+      <p class="brand">
+        <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 4C8 7 4 9 4.5 13.5 5 17 8.5 18 12 15.5 15.5 18 19 17 19.5 13.5 20 9 16 7 12 4Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+          <path d="M12 6.5V21M12 11l-3-2M12 13l3-2.2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+        <span class="brand__name">The Linden Bookshop</span>
+      </p>
+      <div class="progress" data-progress>
+        <p class="progress__label">
+          <span class="progress__count">Step <span data-progress-current>1</span> of <span data-progress-total>5</span></span>
+          <span class="progress__title" data-progress-title>Welcome</span>
+        </p>
+        <ol class="progress__track" aria-hidden="true" data-progress-track></ol>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ Screen 1: Welcome ============ -->
+    <section class="screen screen--welcome" data-screen="welcome" aria-labelledby="welcome-title">
+      <div class="welcome">
+        <div class="welcome__text">
+          <p class="eyebrow">Bookseller onboarding</p>
+          <h1 class="welcome__title" id="welcome-title" tabindex="-1" data-focus-target>Find Their Next Great Read</h1>
+          <p class="welcome__subtitle">The art of a thoughtful book recommendation</p>
+          <div class="welcome__copy">
+            <p>At The Linden Bookshop, we don’t just sell books. We help readers discover stories they’ll love.</p>
+            <p>A great recommendation starts with a conversation, not a bestseller list.</p>
+          </div>
+          <div class="welcome__actions">
+            <button type="button" class="btn btn--primary" data-action="next">Let’s begin</button>
+            <span class="welcome__meta">About 4 minutes</span>
+          </div>
+        </div>
+
+        <div class="welcome__art" aria-hidden="true">
+          <div class="shelf">
+            <div class="shelf__books">
+              <span class="spine spine--burgundy" style="--h: 78%; --w: 2.2rem;"><span class="spine__title">Night Ferry</span></span>
+              <span class="spine spine--parchment" style="--h: 90%; --w: 2.9rem;"><span class="spine__title">A Field Guide to Small Joys</span></span>
+              <span class="spine spine--ink" style="--h: 96%; --w: 2.4rem;"><span class="spine__title">Quiet Hours</span></span>
+              <span class="spine spine--sage" style="--h: 72%; --w: 2.6rem;"><span class="spine__title">The Orchard Letters</span></span>
+              <span class="faceout" data-cover="lantern"></span>
+              <span class="flat-stack">
+                <span class="flat flat--forest"></span>
+                <span class="flat flat--burgundy"></span>
+                <span class="flat flat--parchment"></span>
+              </span>
+            </div>
+            <span class="shelf__plank"></span>
+            <span class="shelf-talker">
+              <span class="shelf-talker__kicker">Staff pick</span>
+              <span class="shelf-talker__note">Ask us why we love it</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Screen 2: The art of recommending ============ -->
+    <section class="screen" data-screen="framework" aria-labelledby="framework-title" hidden>
+      <header class="screen-head">
+        <p class="eyebrow">The framework</p>
+        <h2 class="screen-title" id="framework-title" tabindex="-1" data-focus-target>The art of recommending</h2>
+        <p class="screen-intro">Select each step to explore it.</p>
+      </header>
+
+      <div class="framework">
+        <div class="framework__tabs" role="tablist" aria-label="Three steps to a great recommendation">
+          <button type="button" class="tab" role="tab" id="tab-ask" aria-controls="panel-ask" aria-selected="true" data-tab="ask">
+            <span class="tab__num">01</span>
+            <span class="tab__name">Ask</span>
+            <span class="tab__status" data-tab-status></span>
+          </button>
+          <button type="button" class="tab" role="tab" id="tab-listen" aria-controls="panel-listen" aria-selected="false" tabindex="-1" data-tab="listen">
+            <span class="tab__num">02</span>
+            <span class="tab__name">Listen</span>
+            <span class="tab__status" data-tab-status></span>
+          </button>
+          <button type="button" class="tab" role="tab" id="tab-match" aria-controls="panel-match" aria-selected="false" tabindex="-1" data-tab="match">
+            <span class="tab__num">03</span>
+            <span class="tab__name">Match</span>
+            <span class="tab__status" data-tab-status></span>
+          </button>
+        </div>
+
+        <div class="panel" role="tabpanel" id="panel-ask" aria-labelledby="tab-ask" tabindex="0">
+          <div class="panel__body">
+            <h3 class="panel__lead">Get to know the reader.</h3>
+            <ul class="panel__list">
+              <li>Ask what they enjoy reading.</li>
+              <li>Find out what kind of reading experience they want.</li>
+              <li>Avoid assuming their preferences.</li>
+            </ul>
+            <button type="button" class="link-btn" data-action="tab-next" data-target="listen">Next step: Listen <span aria-hidden="true">→</span></button>
+          </div>
+          <figure class="example">
+            <figcaption class="example__label">Example</figcaption>
+            <blockquote class="example__text example__text--quote">“What’s a book you’ve really enjoyed recently?”</blockquote>
+          </figure>
+        </div>
+
+        <div class="panel" role="tabpanel" id="panel-listen" aria-labelledby="tab-listen" tabindex="0" hidden>
+          <div class="panel__body">
+            <h3 class="panel__lead">Identify what matters to the reader.</h3>
+            <ul class="panel__list">
+              <li>Pay attention to genre, mood, and pacing.</li>
+              <li>Notice preferences and deal-breakers.</li>
+              <li>Clarify anything that is unclear.</li>
+            </ul>
+            <button type="button" class="link-btn" data-action="tab-next" data-target="match">Next step: Match <span aria-hidden="true">→</span></button>
+          </div>
+          <figure class="example">
+            <figcaption class="example__label">Example</figcaption>
+            <p class="example__text">A reader who enjoys mysteries may prefer atmospheric stories over fast-paced thrillers.</p>
+          </figure>
+        </div>
+
+        <div class="panel" role="tabpanel" id="panel-match" aria-labelledby="tab-match" tabindex="0" hidden>
+          <div class="panel__body">
+            <h3 class="panel__lead">Connect the book to the reader.</h3>
+            <ul class="panel__list">
+              <li>Recommend a title that reflects their preferences.</li>
+              <li>Explain why you think it is a good fit.</li>
+              <li>Give the customer room to decide.</li>
+            </ul>
+          </div>
+          <figure class="example">
+            <figcaption class="example__label">Example</figcaption>
+            <blockquote class="example__text example__text--quote">“Since you enjoy character-driven mysteries, I think you might like this one.”</blockquote>
+          </figure>
+        </div>
+      </div>
+
+      <nav class="screen-nav" aria-label="Screen navigation">
+        <button type="button" class="btn btn--quiet" data-action="back">Back</button>
+        <div class="screen-nav__forward">
+          <p class="gate-hint" id="framework-hint" data-gate-hint="framework">Explore all three steps to continue.</p>
+          <button type="button" class="btn btn--primary" data-action="next" data-gate="framework" aria-describedby="framework-hint">Continue</button>
+        </div>
+      </nav>
+    </section>
+
+    <!-- ============ Screen 3: Behind the counter ============ -->
+    <section class="screen" data-screen="conversation" aria-labelledby="conversation-title" hidden>
+      <header class="screen-head">
+        <p class="eyebrow">Practice</p>
+        <h2 class="screen-title" id="conversation-title" tabindex="-1" data-focus-target>Behind the counter</h2>
+        <p class="screen-intro">Choose how to respond to Alex. Alex’s reader profile fills in as you learn more.</p>
+      </header>
+
+      <div class="workspace">
+        <div class="workspace__main">
+          <div class="script" data-transcript></div>
+          <fieldset class="choices" data-choices>
+            <legend class="choices__legend">How do you respond?</legend>
+            <div class="choices__list" data-choices-list></div>
+          </fieldset>
+          <p class="script__reset">
+            <button type="button" class="link-btn link-btn--quiet" data-action="restart-conversation">Start the conversation over</button>
+          </p>
+        </div>
+        <aside class="workspace__side" aria-label="Alex’s reader profile">
+          <div data-profile></div>
+        </aside>
+      </div>
+
+      <nav class="screen-nav" aria-label="Screen navigation">
+        <button type="button" class="btn btn--quiet" data-action="back">Back</button>
+        <div class="screen-nav__forward">
+          <p class="gate-hint" id="conversation-hint" data-gate-hint="conversation">Discover all four of Alex’s preferences to continue.</p>
+          <button type="button" class="btn btn--primary" data-action="next" data-gate="conversation" aria-describedby="conversation-hint">Find a book for Alex</button>
+        </div>
+      </nav>
+    </section>
+
+    <!-- ============ Screen 4: Your recommendation ============ -->
+    <section class="screen" data-screen="recommendation" aria-labelledby="recommendation-title" hidden>
+      <header class="screen-head">
+        <p class="eyebrow">Apply</p>
+        <h2 class="screen-title" id="recommendation-title" tabindex="-1" data-focus-target>Your recommendation</h2>
+        <p class="screen-intro">Select a book to take a closer look, then recommend the one that best fits Alex.</p>
+      </header>
+
+      <div class="workspace">
+        <div class="workspace__main">
+          <div class="display">
+            <ul class="display__shelf" data-shelf aria-label="Books to consider"></ul>
+            <span class="display__plank" aria-hidden="true"></span>
+          </div>
+          <div class="detail" data-detail aria-live="polite"></div>
+        </div>
+        <aside class="workspace__side" aria-label="Alex’s reader profile">
+          <div data-profile></div>
+        </aside>
+      </div>
+
+      <nav class="screen-nav" aria-label="Screen navigation">
+        <button type="button" class="btn btn--quiet" data-action="back">Back</button>
+        <div class="screen-nav__forward">
+          <p class="gate-hint" id="recommendation-hint" data-gate-hint="recommendation">Recommend the strongest match for Alex to continue.</p>
+          <button type="button" class="btn btn--primary" data-action="next" data-gate="recommendation" aria-describedby="recommendation-hint">Continue</button>
+        </div>
+      </nav>
+    </section>
+
+    <!-- ============ Screen 5: Take it to the floor ============ -->
+    <section class="screen" data-screen="summary" aria-labelledby="summary-title" hidden>
+      <header class="screen-head">
+        <p class="eyebrow">Wrap-up</p>
+        <h2 class="screen-title" id="summary-title" tabindex="-1" data-focus-target>Take it to the floor</h2>
+      </header>
+
+      <div class="summary">
+        <p class="summary__motto" aria-label="Ask. Listen. Match.">
+          <span>Ask<span class="summary__dot">.</span></span>
+          <span>Listen<span class="summary__dot">.</span></span>
+          <span>Match<span class="summary__dot">.</span></span>
+        </p>
+
+        <ol class="summary__steps">
+          <li><span class="summary__num">01</span><span><strong>Ask.</strong> Get to know the reader.</span></li>
+          <li><span class="summary__num">02</span><span><strong>Listen.</strong> Identify what matters to the reader.</span></li>
+          <li><span class="summary__num">03</span><span><strong>Match.</strong> Connect the book to the reader.</span></li>
+        </ol>
+
+        <figure class="model">
+          <div class="model__cover" data-cover="lantern"></div>
+          <div class="model__body">
+            <figcaption class="example__label">A thoughtful recommendation for Alex</figcaption>
+            <blockquote class="model__quote">“Based on what you’ve told me, I think you’d enjoy <cite>The Lantern House</cite>. It’s an atmospheric mystery that focuses on its characters rather than graphic crime, and it’s a complete story in one book.”</blockquote>
+          </div>
+        </figure>
+      </div>
+
+      <nav class="screen-nav" aria-label="Screen navigation">
+        <button type="button" class="btn btn--quiet" data-action="back">Back</button>
+        <button type="button" class="btn btn--primary" data-action="restart">Start again</button>
+      </nav>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
