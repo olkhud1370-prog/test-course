@@ -1,0 +1,1 @@
+Review design-system.md and brand-board.png. Restyle the existing course using the supplied JPG assets, replacing previous simplified SVG book covers. Preserve all instructional content, branching, learner state and assessment logic. Use the board as a reference, not a flattened interface. Test all interactions and responsive layouts, then commit and push.

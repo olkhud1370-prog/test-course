@@ -12,6 +12,10 @@ A 3 to 5 minute HTML5 microlearning experience for new booksellers at **The Lind
 | `styles.css` | Design tokens (palette, type, spacing), layout, and components |
 | `script.js` | Navigation, learner state, conversation branching, reader profile, book selection, and the SVG book covers |
 | `CLAUDE.md` | Project and development standards |
+| `assets/` | Approved brand assets: logo, brand lockup, bookshop photo, Alex portrait, and the four book covers |
+| `design/design-system.md` | Visual design system (tokens, type, layout, screen direction) |
+| `design/brand-board.png` | Brand board, the visual reference for the design system (not used in the course itself) |
+| `design/CLAUDE-RESTYLE-PROMPT.txt` | Brief for the upcoming restyle |
 
 There is no build step and no external dependency. The fonts are system fonts, and the book covers are inline SVG, so the course works offline.
 
